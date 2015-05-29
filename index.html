@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Speak, Friend, and enter.</title>
+<script type="text/javascript" src="egg.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+  function unwrap(c){
+      return String.fromCharCode(100+c);
+  }
+  var ar = [9, 1, 8, 11, 10];
+  var fi = ar.map(unwrap).join(",");
+  var gatekeeper = new Egg();
+  gatekeeper.AddCode(fi, function(){
+      alert(";)");
+  }).Listen();
+</script>
+<style type="text/css">
+  div.gate {
+    background-color: black;
+    background-image: url("gate.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+  }
+</style>
+<div class="gate">
+</div>
+</body>
+</html>
