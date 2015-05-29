@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Camp diagrams</title>
+</head>
+<body>
+    {% for item in diagrams %}
+        <h2> {{ diagram.title }} </h2>
+        <img src="{{ diagram.image }}">
+    {% endfor %}
+</body>
+</html>
