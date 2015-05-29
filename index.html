@@ -1,7 +1,8 @@
 <html>
 <head>
 <title>Speak, Friend, and enter.</title>
-<script type="text/javascript" src="egg.min.js"></script>
+<script type="text/javascript" src="scripts/egg.min.js"></script>
+<script type="text/javascript" src="scripts/countdown.js"></script>
 </head>
 <body>
 <script type="text/javascript">
@@ -18,13 +19,35 @@
 <style type="text/css">
   div.gate {
     background-color: black;
-    background-image: url("gate.jpg");
+    background-image: url("static/gate.jpg");
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
+    position: relative;
+    z-index: -1;
   }
+
+  #countdown {
+    color: white;
+    z-index: 1;
+    position: absolute;
+    left: 43%;
+    top: 94%;
+    text-align: center;
+    font-family: "wizard";
+  }
+
+  @font-face {
+    font-family: "wizard";
+    src: url("http://se.cretfi.re/RINGM___.TTF");
+  }
+
 </style>
+<script type="text/javascript">
+  timer = setInterval(showRemaining, 1000);
+</script>
 <div class="gate">
+<div id="countdown"></div>
 </div>
 </body>
 </html>
