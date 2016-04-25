@@ -1,0 +1,7 @@
+Flask>=0.10.1
+PyYAML>=3.0
+requests>=2.5.3
+pyOpenSSL
+ndg-httpsclient
+pyasn1
+python-dateutil>=2.4.0
